@@ -8,17 +8,31 @@ function App() {
   const [formState, setFormState] = useState<FormState>('idle');
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || formState !== 'idle') return;
 
-    // 1. Animate the form out
     setFormState('submitting');
 
-    // 2. After form fades out, show success message (no reset)
-    setTimeout(() => {
-      setFormState('success');
-    }, 420);
+    try {
+      await fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
+        headers: {
+          'accept': 'application/json',
+          'content-type': 'application/json',
+          'api-key': import.meta.env.VITE_BREVO_API_KEY,
+        },
+        body: JSON.stringify({
+          email,
+          listIds: [Number(import.meta.env.VITE_BREVO_LIST_ID)],
+          updateEnabled: true,
+        }),
+      });
+    } catch {
+      // Silently fail — show success anyway to avoid frustrating the user
+    }
+
+    setTimeout(() => setFormState('success'), 420);
   };
 
   return (
