@@ -2,19 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Prevent white bars on iPhone ── */
+html {
+  background-color: #000;
+  /* Fallback chain for full-height on all iOS versions */
+  height: 100%;
+  height: -webkit-fill-available;
+  height: 100dvh;
+}
+
+body {
+  background-color: #000;
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
+}
+
+/* ── Prevent iOS Safari zoom on input focus ── */
+input[type="email"],
+input[type="text"],
+input[type="number"] {
+  font-size: 16px !important;
+}
+
+
+
 @keyframes form-out {
-  0%   { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-10px); }
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes success-in {
-  0%   { opacity: 0; transform: translateY(12px); letter-spacing: 0.15em; }
-  100% { opacity: 1; transform: translateY(0);    letter-spacing: 0.35em; }
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+    letter-spacing: 0.15em;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0.35em;
+  }
 }
 
 @keyframes line-grow {
-  0%   { width: 0; opacity: 0; }
-  100% { width: 2rem; opacity: 1; }
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    width: 2rem;
+    opacity: 1;
+  }
 }
 
 .animate-form-out {
