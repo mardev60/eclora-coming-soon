@@ -177,7 +177,7 @@ function App() {
       </div>
 
       {/* Footer */}
-      <div className="absolute bottom-6 left-0 right-0 px-8 md:px-12 flex items-center justify-between">
+      <div className="absolute bottom-6 left-0 right-0 px-8 md:px-12 flex items-center justify-between z-10">
         <span
           className="text-white/30 text-[10px] tracking-[0.2em] uppercase"
           style={{ fontFamily: "'GFS Didot', serif" }}
@@ -185,7 +185,9 @@ function App() {
           © 2026 Éclora
         </span>
         <a
-          href="#"
+          href="https://www.instagram.com/eclora.fr"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-white/30 hover:text-[#B5BDAC] transition-colors duration-300 text-[10px] tracking-[0.15em] uppercase"
           style={{ fontFamily: "'GFS Didot', serif" }}
         >
