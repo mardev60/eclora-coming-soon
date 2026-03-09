@@ -42,8 +42,8 @@ function App() {
         className="absolute inset-0 bg-cover transition-transform duration-[1200ms] ease-out"
         style={{
           backgroundImage: `url(${bgImage})`,
-          backgroundPosition: '66% center',
-          transform: isHovered ? 'scale(1.19)' : 'scale(1.15)',
+          backgroundPosition: '68% center',
+          transform: isHovered ? 'scale(1.05)' : 'scale(1.01)',
         }}
       />
 
@@ -52,7 +52,7 @@ function App() {
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.65) 100%)',
+            'linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.80) 100%)',
         }}
       />
 
