@@ -39,10 +39,11 @@ function App() {
     <div className="relative min-h-[100dvh] w-full overflow-hidden">
       {/* Background image with subtle Ken-Burns on hover */}
       <div
-        className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms] ease-out"
+        className="absolute inset-0 bg-cover transition-transform duration-[1200ms] ease-out"
         style={{
           backgroundImage: `url(${bgImage})`,
-          transform: isHovered ? 'scale(1.04)' : 'scale(1)',
+          backgroundPosition: '66% center',
+          transform: isHovered ? 'scale(1.19)' : 'scale(1.15)',
         }}
       />
 
