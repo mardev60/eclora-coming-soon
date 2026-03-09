@@ -36,7 +36,7 @@ function App() {
   };
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
+    <div className="relative min-h-[100dvh] w-full overflow-hidden">
       {/* Background image with subtle Ken-Burns on hover */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms] ease-out"
@@ -56,7 +56,7 @@ function App() {
       />
 
       {/* Main content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 md:px-12 pb-20 sm:pb-0">
+      <div className="relative z-10 min-h-[100dvh] flex flex-col items-center justify-center px-6 md:px-12 pb-20 sm:pb-0">
         <div className="text-center w-full max-w-2xl flex flex-col items-center">
 
           {/* Monogram */}
