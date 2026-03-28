@@ -42,8 +42,8 @@ function App() {
         className="absolute inset-0 bg-cover transition-transform duration-[1200ms] ease-out"
         style={{
           backgroundImage: `url(${bgImage})`,
-          backgroundPosition: '68% center',
-          transform: isHovered ? 'scale(1.05)' : 'scale(1.01)',
+          backgroundPosition: '47% center',
+          transform: isHovered ? 'scale(1.02)' : 'scale(1.01)',
         }}
       />
 
