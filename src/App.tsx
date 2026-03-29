@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import bgImage from './background.png';
+import bgImage from './background.jpg';
 
 type FormState = 'idle' | 'submitting' | 'success';
 
